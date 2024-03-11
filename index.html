@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+* {
+box-sizing:border-box;
+}
+
+body{
+background-color: #c7bae5; /* For browsers that do not support gradients */
+background-image: linear-gradient(to bottom right,#c7bae5  ,rgb(63, 65, 65));
+background-repeat: no-repeat;
+}
+
+form{
+display:flex;
+flex:1;
+flex-wrap: nowrap;
+height:100vh;
+margin:auto;
+width:80%;
+height:100%;
+border-radius: 10px;
+flex-direction: column;
+padding:20px;
+font-size: 25px;
+background-color:#c7bae5;
+background-image: linear-gradient(to bottom right,rgb(63, 65, 65),#c7bae5);
+box-shadow: 0 7px 9px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+h2{
+text-align:center;
+color:#362953;
+text-decoration: underline;
+}
+
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+color:white;
+}
+
+input[type=text],input[type=date] ,select, textarea{
+width: 100%;
+padding: 15px;
+font-size:17px;
+border: 1px solid #ccc;
+border-radius: 4px;
+resize: vertical;
+}
+
+input[type=submit] {
+background-color: #4f495f;
+color: white;
+padding: 12px 20px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+float: right;
+font-size: 20px;
+box-shadow: 1px 15px 15px 1px rgba(21, 19, 19, 0.2), 10px 6px 20px 10px rgba(36, 32, 32, 0.19);
+}
+
+input[type=submit]:hover {
+background-color: #726d73;
+color:black;
+box-shadow: 5px 10px 10px 5px rgba(20, 9, 9, 0.2), 5px 6px 20px 5px rgba(251, 247, 247, 0.19);
+}
+
+.col-25 {
+float: left;
+width: 25%;
+margin-top: 6px;
+}
+
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width:600px) {
+.col-25, .col-75, h1, input[type=submit] {
+width: 100%;
+height: 100%;
+margin-top: 0;
+}
+}
+
+
+</style>
+</head>
+<body>
+<form action="Final.php"  method="post">
+<h2>Maintenance-Record</h2>
+<div class="container">
+  <div class="row">
+    <div class="col-25">
+      <label for="fname">First Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="fname" name="firstname" placeholder="Your First name..">
+    </div>
+  </div>
+<br>
+  <div class="row">
+    <div class="col-25">
+      <label for="lname">Last Name</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="lname" name="lastname" placeholder="Your Last name..">
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-25">
+      <label for="country">Flat No.</label>
+    </div>
+    <div class="col-75">
+    <input type="text" id="flat" name="flat" placeholder="Your Flat No..">  
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-25">
+      <label for="month">Month</label>
+    </div>
+    <div class="col-75">
+      <input type="date" id="subject" name="subject" placeholder="Select Date">
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-25">
+      <label for="payment">Payment</label>
+    </div>
+    <div class="col-75">
+        <select id="payment" name="payment">
+            <option value="select" selected>--Select--</option>
+            <option value="Pending">Pending</option>
+            <option value="Paid">Paid</option>
+            </select>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-25">
+      <label for="month">Due-Amount</label>
+    </div>
+    <div class="col-75">
+      <input type="text" id="due" name="subject" placeholder="Amonut Pending For Maintanence">
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <div class="col-25">
+      <label for="subject">Comments</label>
+    </div>
+    <div class="col-75">
+      <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+    </div>
+  </div>
+
+  <br>
+  <div class="row">
+    <input name="submit" type="submit" value="Submit">
+  </div>
+  </div>
+
+</form>
+    
+</body>
+</html>
